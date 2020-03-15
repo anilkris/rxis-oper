@@ -32,6 +32,7 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 

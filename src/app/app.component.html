@@ -7,13 +7,20 @@
       <div>
         <a mat-button [routerLink]="'/home'" routerLinkActive="active"> Home</a>
         <a mat-button [routerLink]="'/operators'" routerLinkActive="active"> Operators</a>
+        <a mat-button [routerLink]="'/material'" routerLinkActive="active"> Material</a>
       </div>
-      <div style="margin-left: 900px;">
+      <div style="margin-top: 20px;margin-left: 900px;">
+<mat-form-field>
 
-      <button mat-button (click)="onFirstTheme()"> Theme1</button>
-      <button mat-button (click)="onSecondTheme()"> Theme2</button>
-      <button mat-button (click)="onThirdTheme()"> Theme3</button>
-      <button mat-button (click)="onFourthTheme()"> Theme4</button>
+        <mat-label>Theme</mat-label>
+        <mat-select [(value)]="selectedTheme">
+          <mat-option value="deeppurple-amber">Deeppurple Amber</mat-option>
+          <mat-option value="indigo-pink">Indigo Pink</mat-option>
+          <mat-option value="pink-bluegrey">Pink Bluegrey</mat-option>
+          <mat-option value="purple-green">Purple Green</mat-option>
+          </mat-select>
+    
+</mat-form-field>
       </div>
     </mat-toolbar-row>
  

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { OperatorsComponent } from './operators/operators.component';
+import { MaterialComponent } from './material/material.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'operators',
     component: OperatorsComponent
+  },
+  {
+    path: 'material',
+    component: MaterialComponent
   }
 ];
 
@@ -23,5 +28,5 @@ const routes: Routes = [
 export class AppRoutingModule { }
 
 export const routingComponents = [
-  HomeComponent, OperatorsComponent
+  HomeComponent, OperatorsComponent, MaterialComponent
 ];
