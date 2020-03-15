@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-combination',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CombinationComponent implements OnInit {
 
-  constructor() { }
+  selectedTheme = 'purple-green';
+  subscription: Subscription;
+  constructor(private dataService: DataService) {
+
+    this.subscription = this.dataService.missionAnnounced$.subscribe(
+      theme => {
+        this.selectedTheme = theme;
+    });
+  }
 
   ngOnInit(): void {
   }

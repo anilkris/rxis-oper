@@ -1,8 +1,6 @@
-.operators-container {
-    position: absolute;
-    top: 80px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  
+.operators-class {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 10vw 40vw; 
+  grid-gap: 1em;
+} 

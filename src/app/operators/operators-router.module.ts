@@ -8,7 +8,7 @@ const operatorsRoutes: Routes = [
     path: '',
     component: OperatorsComponent,
     children : [
-      {path: '',  component: CombinationComponent}
+      {path: 'combination',  component: CombinationComponent}
     ]
   }
 

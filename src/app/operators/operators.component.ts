@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { Subscription } from 'rxjs/internal/Subscription';
 
 @Component({
   selector: 'app-operators',
@@ -7,7 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OperatorsComponent implements OnInit {
 
-  constructor() { }
+
+  selectedTheme = 'purple-green';
+  subscription: Subscription;
+  constructor(private dataService: DataService) {
+
+    this.subscription = this.dataService.missionAnnounced$.subscribe(
+      theme => {
+        this.selectedTheme = theme;
+    });
+
+   }
 
   ngOnInit(): void {
   }

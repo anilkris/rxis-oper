@@ -23,19 +23,10 @@ export class MaterialComponent implements OnInit {
       hideRequired: this.hideRequiredControl,
       floatLabel: this.floatLabelControl,
     });
-    /*
-    this.dataService.themeAnnounced$.subscribe(
-      theme => {
-       this.selectedTheme = theme
-       console.log(theme);
-      }
-    );
-    */
 
     this.subscription = this.dataService.missionAnnounced$.subscribe(
-      mission => {
-        console.log("Got theme in  material" + mission)
-        this.selectedTheme = mission;
+      theme => {
+        this.selectedTheme = theme;
     });
   }
   ngOnInit(): void {
