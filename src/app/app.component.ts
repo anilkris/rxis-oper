@@ -7,7 +7,7 @@ import { DataService } from './data.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  //selectedTheme = 'deeppurple-amber';
+  // selectedTheme = 'deeppurple-amber';
 
   selectedTheme = 'purple-green';
   constructor(private dataService: DataService) {
@@ -25,7 +25,8 @@ purple-green.css
 
     this.dataService.setSelectedTheme(this.selectedTheme);
     console.log(this.selectedTheme);
-    this.dataService.announcedTheme(this.selectedTheme);
+
+    this.dataService.announceMission(this.selectedTheme);
 
   }
   onSecondTheme() {
@@ -34,7 +35,8 @@ purple-green.css
     this.dataService.setSelectedTheme(this.selectedTheme);
     console.log(this.selectedTheme);
 
-    this.dataService.announcedTheme(this.selectedTheme);
+
+    this.dataService.announceMission(this.selectedTheme);
   }
   onThirdTheme() {
     this.selectedTheme = 'pink-bluegrey';
@@ -42,7 +44,8 @@ purple-green.css
     this.dataService.setSelectedTheme(this.selectedTheme);
     console.log(this.selectedTheme);
 
-    this.dataService.announcedTheme(this.selectedTheme);
+
+    this.dataService.announceMission(this.selectedTheme);
   }
   onFourthTheme() {
     this.selectedTheme = 'purple-green';
@@ -50,10 +53,16 @@ purple-green.css
     this.dataService.setSelectedTheme(this.selectedTheme);
     console.log(this.selectedTheme);
 
-    this.dataService.announcedTheme(this.selectedTheme);
+
+    this.dataService.announceMission(this.selectedTheme);
   }
 
+  onSelectionChange() {
 
+
+    this.dataService.announceMission(this.selectedTheme);
+
+  }
 
 
 

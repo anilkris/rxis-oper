@@ -6,10 +6,19 @@ import { Observable, of, Subject } from 'rxjs';
 })
 export class DataService {
 
+  private missionAnnouncedSource = new Subject<string>();
+
+  missionAnnounced$ = this.missionAnnouncedSource.asObservable();
+
   selectedTheme ="";
   constructor() { }
   private themeAnnounced = new Subject<string>();
   themeAnnounced$ = this.themeAnnounced.asObservable();
+
+    // Service message commands
+    announceMission(mission: string) {
+      this.missionAnnouncedSource.next(mission);
+    }
 
   announcedTheme(theme: string) {
     this.themeAnnounced.next(theme);

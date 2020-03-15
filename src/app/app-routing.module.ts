@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { OperatorsComponent } from './operators/operators.component';
 import { MaterialComponent } from './material/material.component';
 
 
@@ -12,11 +11,17 @@ const routes: Routes = [
   },
   {
     path: 'operators',
-    component: OperatorsComponent
+    loadChildren: () => import('./operators/operators.module').then(m => m.OperatorsModule)
   },
   {
     path: 'material',
     component: MaterialComponent
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+
+
   }
 ];
 
@@ -28,5 +33,5 @@ const routes: Routes = [
 export class AppRoutingModule { }
 
 export const routingComponents = [
-  HomeComponent, OperatorsComponent, MaterialComponent
+  HomeComponent,  MaterialComponent
 ];

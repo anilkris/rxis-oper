@@ -1,7 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -39,9 +36,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatCheckboxModule,
     MatButtonModule,
     MatInputModule,
@@ -74,9 +70,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatPaginatorModule
   ],
   exports: [
-    CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatCheckboxModule,
     MatButtonModule,
     MatInputModule,

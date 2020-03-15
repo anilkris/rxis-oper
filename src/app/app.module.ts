@@ -13,11 +13,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     routingComponents,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserModule,
+    BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

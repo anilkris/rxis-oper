@@ -8,12 +8,13 @@
         <a mat-button [routerLink]="'/home'" routerLinkActive="active"> Home</a>
         <a mat-button [routerLink]="'/operators'" routerLinkActive="active"> Operators</a>
         <a mat-button [routerLink]="'/material'" routerLinkActive="active"> Material</a>
+        <a mat-button [routerLink]="'/admin'" routerLinkActive="active"> Admin</a>
       </div>
       <div style="margin-top: 20px;margin-left: 900px;">
 <mat-form-field>
 
         <mat-label>Theme</mat-label>
-        <mat-select [(value)]="selectedTheme">
+        <mat-select [(value)]="selectedTheme" (selectionChange)="onSelectionChange()">
           <mat-option value="deeppurple-amber">Deeppurple Amber</mat-option>
           <mat-option value="indigo-pink">Indigo Pink</mat-option>
           <mat-option value="pink-bluegrey">Pink Bluegrey</mat-option>
